@@ -30,24 +30,54 @@ export const listCartItemsReducer = (state={ cartItems : []}, action) => {
                 loading : false,
                 error : action.payload
             };
+        default:
+            return state;
+    }
+}
+
+export const addItemToCartReducer = (state={ newCartItem : {}}, action) => {
+    switch(action.type){
         case CART_ITEM_ADD_REQUEST:
-            return state;
+            return {
+                ...state,
+                cartItems : [...state.cartItems, action.payload]
+            };
         case CART_ITEM_ADD_SUCCESS:
-            return state;
+            return {
+                loading : false,
+                newCartItem : action.payload
+            };
         case CART_ITEM_ADD_FAIL:
-            return state;
+            return {
+                loading : false,
+                error : action.payload
+            };
         case CART_ITEM_REMOVE_REQUEST:
-            return state;
+            return {
+                loading : true
+            };
         case CART_ITEM_REMOVE_SUCCESS:
-            return state;
+            return {
+                loading : false
+            };
         case CART_ITEM_REMOVE_FAIL:
-            return state;
+            return {
+                loading : false,
+                error : action.payload 
+            };
         case CART_ITEM_UPDATE_REQUEST:
-            return state;
+            return {
+                loading : true
+            };
         case CART_ITEM_UPDATE_SUCCESS:
-            return state;
+            return {
+                loading : false
+            }
         case CART_ITEM_UPDATE_FAIL:
-            return state;
+            return {
+                loading : false,
+                error : action.payload
+            };
         default:
             return state;
     }
