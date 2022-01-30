@@ -1,0 +1,13 @@
+.productItem-card{
+    @include flex(column, flex-start, center);
+    border: 2px solid black;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.productItem-details{
+    @include flex(column, flex-start, center);
+}
