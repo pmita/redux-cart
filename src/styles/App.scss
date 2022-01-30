@@ -7,10 +7,13 @@
 }
 
 //Containers
+@import './containers/Navbar';
 @import './containers/ProductScreen';
+@import './containers/CartScreen';
 
 // Components
 @import './components/ProductItem';
+@import './components/CartItem';
 
 
 // Pages

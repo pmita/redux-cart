@@ -9,6 +9,7 @@ const ProductItem = ({ item }) => {
             <p>{item.price}</p>
             <p>{item.qtyInStock}</p>
             <p>{item.description}</p>
+            <button className='btn'>Add to Cart</button>
         </div>
     </div>
   );
