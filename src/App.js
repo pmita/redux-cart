@@ -1,8 +1,10 @@
+import ProductScreen from "./containers/products/ProductScreen";
 
 function App() {
   return (
     <div className="App">
-      Welcome to App.js component
+      <h1>Shopping Cart App</h1>
+      <ProductScreen />
     </div>
   );
 }

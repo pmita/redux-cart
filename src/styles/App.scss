@@ -6,7 +6,11 @@
     background: $white;
 }
 
+//Containers
+@import './containers/ProductScreen';
+
 // Components
+@import './components/ProductItem';
 
 
 // Pages
