@@ -1,6 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addProductToCart } from '../../store/actions/cartAction';
 
 const ProductItem = ({ item }) => {
+  //STATE & VARIABLE
+  const dispatch = useDispatch()
+  
+  const addToCartHandler = () => {
+    dispatch(addProductToCart(item))
+  }
+
   return (
     <div className='productItem-card'>
         <img src={item.image} alt={item.title} />
@@ -9,7 +18,12 @@ const ProductItem = ({ item }) => {
             <p>{item.price}</p>
             <p>{item.qtyInStock}</p>
             <p>{item.description}</p>
-            <button className='btn'>Add to Cart</button>
+            <button 
+              className='btn'
+              onClick={addToCartHandler}  
+            >
+              Add to Cart
+            </button>
         </div>
     </div>
   );
